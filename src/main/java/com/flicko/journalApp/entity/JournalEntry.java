@@ -1,9 +1,6 @@
 package com.flicko.journalApp.entity;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.NonNull;
-import lombok.Setter;
+import lombok.*;
 import org.bson.types.ObjectId;
 import org.springframework.cglib.core.Local;
 import org.springframework.data.annotation.Id;
@@ -14,6 +11,7 @@ import java.util.Date;
 
 @Document(collection = "journal_entries")
 @Data
+@NoArgsConstructor
 public class JournalEntry {
 
     @Id

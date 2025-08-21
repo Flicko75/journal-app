@@ -1,5 +1,6 @@
 package com.flicko.journalApp.entity;
 
+import com.flicko.journalApp.enums.Sentiment;
 import lombok.*;
 import org.bson.types.ObjectId;
 import org.springframework.cglib.core.Local;
@@ -23,5 +24,7 @@ public class JournalEntry {
     private String content;
 
     private LocalDateTime date;
+
+    private Sentiment sentiment;
 
 }

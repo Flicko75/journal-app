@@ -1,0 +1,21 @@
+spring:
+  data:
+    redis:
+      url: ${REDIS_URI}
+    mongodb:
+      uri: ${MONGO_URI}
+      database: journaldb
+      auto-index-creation: true
+  application:
+    name: journalApp
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: email@gmail.com
+    password: xxx
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true

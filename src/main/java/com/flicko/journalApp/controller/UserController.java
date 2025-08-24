@@ -6,6 +6,7 @@ import com.flicko.journalApp.entity.User;
 import com.flicko.journalApp.repository.UserRepository;
 import com.flicko.journalApp.service.JournalEntryService;
 import com.flicko.journalApp.service.UserService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -22,6 +23,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/user")
+@Tag(name = "User APIs", description = "Read, Update & Delete User")
 public class UserController {
 
     @Autowired

@@ -1,13 +1,10 @@
 package com.flicko.journalApp.service;
 
-import com.flicko.journalApp.entity.JournalEntry;
+import com.flicko.journalApp.dto.UserDTO;
 import com.flicko.journalApp.entity.User;
-import com.flicko.journalApp.repository.JournalEntryRepository;
 import com.flicko.journalApp.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.bson.types.ObjectId;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -32,7 +29,7 @@ public class UserService {
         userRepository.save(user);
     }
 
-    public void saveNewUser(User user){
+    public void saveNewUser(UserDTO user){
         try {
             user.setPassword(passwordEncoder.encode(user.getPassword()));
             user.setRoles(Arrays.asList("USER"));
